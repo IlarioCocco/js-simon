@@ -35,10 +35,24 @@ setTimeout(function () {
     alert("ok hai individuato i numeri" + " " + numeriUtente);
     console.log("ok hai individuato i numeri" + " " + numeriUtente)
     //salvo in una var la lungh array numeriUtente
+    var lunghezza = numeriUtente.length;
     //alert che mostra la lunghezza che ho salvato
-
+    console.log("punteg utente:" + lunghezza);
+    
     
 }, 5000 );
+
+
+
+
+// const clothing = ['shoes', 'shirts', 'socks', 'sweaters'];
+
+// console.log(clothing.length);
+// // expected output: 4
+
+
+
+
 
 
 
