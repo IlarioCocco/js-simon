@@ -12,10 +12,11 @@
 // Un alert() espone 5 numeri generati casualmente.
 let numeroCasuali = [];
 for (let i = 0; i < 5; i++){
-    let numeroCasuali = (Math.floor(Math.random() * 5));
-    console.log("numeri generati casualmente:" + numeroCasuali)
-    alert("numeri generati casualmente:" + " " + numeroCasuali);
+    let numeroCasuale = (Math.floor(Math.random() * 5));
+    numeroCasuali.push(numeroCasuale);
 }
+console.log("numeri generati casualmente:" + " " + numeroCasuali)
+alert("numeri generati casualmente:" + " " + numeroCasuali);
 
 
 // Da li parte un timer di 30 secondi.
@@ -24,20 +25,28 @@ for (let i = 0; i < 5; i++){
 let numeriUtente = [];
 setTimeout(function () {
     for (let i = 0; i < 5; i++){
-        numeriUtente = parseInt(prompt("inserisci i numeri visti precedentemente"));
-        console.log("numeri Utente:" + numeriUtente)
-        alert("numeri Utente:" + " " + numeriUtente);
-        if (numeriUtente == numeroCasuali[i]) {
-        }
+        numeroUtente = parseInt(prompt("inserisci i numeri visti precedentemente"));
+    if (numeroCasuali.includes(numeroUtente)) {
+        //inserisco il numero dell'utente all'interno dell'array numeriUtente
+        numeriUtente.push(numeroUtente);
+    }  
+     
     }
-    alert("ok hai individuato i numeri");
-    console.log("ok hai individuato i numeri")
+    alert("ok hai individuato i numeri" + " " + numeriUtente);
+    console.log("ok hai individuato i numeri" + " " + numeriUtente)
+    //salvo in una var la lungh array numeriUtente
+    //alert che mostra la lunghezza che ho salvato
+
     
 }, 5000 );
 
-// il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 
+
+// const pets = ['cat', 'dog', 'bat'];
+
+// console.log(pets.includes('cat'));
+// // expected output: true
 
 
 
